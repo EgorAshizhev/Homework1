@@ -1,0 +1,249 @@
+@import 'vars';
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Montserrat", "arial";
+    font-size: 16px;
+}
+
+.center {
+    padding-left: calc(50% - 550px);
+    padding-right: calc(50% - 550px);
+}
+
+.header {
+    height: 800px;
+    background-color: rgba(225, 255, 143, 1);
+    background-size: cover;
+    padding-top: 196px;
+    box-sizing: border-box;
+    position: relative;
+
+    &__upstars {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 36px;
+        box-sizing: border-box;
+        display: flex;
+        position: absolute;
+        top: 94px;
+        left: 63px;
+        z-index: 1;
+    }
+
+    &__downstars {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 36px;
+        box-sizing: border-box;
+        display: flex;
+        position: absolute;
+        right: 344px;
+        bottom: 149px;
+        z-index: 1;
+    }
+
+    &__rightstar {
+        box-sizing: border-box;
+        display: flex;
+        position: absolute;
+        right: 0px;
+        z-index: 1;
+    }
+}
+
+.header__content {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.header__title {
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: rgba(32, 32, 39, 1);
+    font-size: 64px;
+
+}
+
+.header__title-disc {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-grey;
+}
+
+.header__span {
+    font-weight: 600;
+}
+
+.header__button {
+    margin-top: 24px;
+    width: 247px;
+    height: 66px;
+    border-radius: 60px;
+    border: none;
+    background: rgba(32, 32, 39, 1);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.2s ease;
+
+}
+
+.header__button:hover {
+    background-color: white;
+    border: solid 1px black;
+    color: black;
+    transition-delay: 3ms;
+    transform: scale(1.1);
+}
+
+
+// Об играх
+
+.main {
+    position: relative;
+    box-sizing: border-box;
+    height: 1470px;
+    background-color: $color-grey;
+    padding-top: 94px;
+    z-index: 5;
+
+    &__rightstar {
+        box-sizing: border-box;
+        display: flex;
+        position: absolute;
+        right: 0px;
+        z-index: -1;
+    }
+
+    &__downstars {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 18px;
+        position: absolute;
+        left: 40px;
+        z-index: 1;
+    }
+
+
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        color: white;
+        padding-bottom: 24px;
+
+        &-disc {
+            color: white;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        padding: 20px;
+        padding-top: 72px;
+        max-height: 1470px;
+        width: 1201px;
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: flex-start;
+        text-decoration: none;
+        width: 378px;
+        transition: transform 0.2s ease;
+
+        &-img {
+            margin-bottom: 32px;
+        }
+    }
+
+    .main__link:hover {
+        transition-delay: 3ms;
+        transform: scale(1.1);
+    }
+
+    .numberfour,
+    .numbersix {
+        height: 551px;
+    }
+
+    .numbertwo,
+    .numberfive {
+        height: 512px;
+    }
+
+    .numberone,
+    .numberthree {
+        height: 473px;
+    }
+
+    &__underframe {
+        height: 91px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 30px;
+        width: 378px;
+
+        &-disc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 108px;
+            height: 36px;
+            font-weight: 500;
+            font-size: 16px;
+            background-color: rgba(247, 247, 247, 1);
+            border-radius: 53px;
+            color: black;
+        }
+
+        &-title {
+            color: $color-grey;
+            font-weight: 700;
+            font-size: 32px;
+        }
+    }
+
+}
