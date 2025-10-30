@@ -22,7 +22,6 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-
 .header__upstars {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +34,6 @@ body {
   left: 63px;
   z-index: 1;
 }
-
 .header__downstars {
   display: flex;
   flex-wrap: wrap;
@@ -48,13 +46,30 @@ body {
   bottom: 149px;
   z-index: 1;
 }
-
 .header__rightstar {
   box-sizing: border-box;
   display: flex;
   position: absolute;
   right: 0px;
   z-index: 1;
+}
+.header__strip {
+  background-color: rgb(188, 236, 48);
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.header__strip .hader__strip-text {
+  height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 51px;
+}
+.header__strip-centertext {
+  font-weight: 700;
+  font-size: 30px;
+  color: black;
 }
 
 .header__content {
@@ -94,6 +109,8 @@ body {
   background: rgb(32, 32, 39);
   cursor: pointer;
   font-size: 24px;
+  font-weight: 600;
+  line-height: 142%;
   color: white;
   transition: transform 0.2s ease;
 }
@@ -114,7 +131,6 @@ body {
   padding-top: 94px;
   z-index: 5;
 }
-
 .main__rightstar {
   box-sizing: border-box;
   display: flex;
@@ -122,7 +138,6 @@ body {
   right: 0px;
   z-index: -1;
 }
-
 .main__downstars {
   box-sizing: border-box;
   display: flex;
@@ -131,23 +146,20 @@ body {
   gap: 18px;
   position: absolute;
   left: 40px;
-  z-index: 1;
+  z-index: -1;
 }
-
 .main__title {
   font-weight: 700;
   font-size: 64px;
   color: white;
   padding-bottom: 24px;
 }
-
 .main__title-disc {
   color: white;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
 }
-
 .main__content {
   display: flex;
   gap: 32px;
@@ -159,13 +171,11 @@ body {
   max-height: 1470px;
   width: 1201px;
 }
-
 .main__flex {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-
 .main__link {
   display: flex;
   align-items: flex-start;
@@ -173,31 +183,34 @@ body {
   width: 378px;
   transition: transform 0.2s ease;
 }
-
 .main__link-img {
   margin-bottom: 32px;
 }
-
+.main__link-fist {
+  position: absolute;
+  padding-top: 95px;
+  padding-left: 132px;
+  font-weight: 800;
+  font-size: 82px;
+  z-index: 3;
+}
 .main .main__link:hover {
   transition-delay: 3ms;
   transform: scale(1.1);
 }
-
 .main .numberfour,
 .main .numbersix {
   height: 551px;
 }
-
 .main .numbertwo,
 .main .numberfive {
+  position: relative;
   height: 512px;
 }
-
 .main .numberone,
 .main .numberthree {
   height: 473px;
 }
-
 .main__underframe {
   height: 91px;
   display: flex;
@@ -208,7 +221,6 @@ body {
   padding-left: 32px;
   padding-right: 32px;
 }
-
 .main__product {
   display: flex;
   flex-direction: column;
@@ -216,7 +228,6 @@ body {
   border-radius: 30px;
   width: 378px;
 }
-
 .main__product-disc {
   display: flex;
   flex-direction: column;
@@ -230,11 +241,8 @@ body {
   border-radius: 53px;
   color: black;
 }
-
 .main__product-title {
   color: rgb(32, 32, 39);
   font-weight: 700;
   font-size: 32px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

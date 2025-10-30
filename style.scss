@@ -59,6 +59,27 @@ body {
         right: 0px;
         z-index: 1;
     }
+
+    &__strip {
+        background-color: rgba(188, 236, 48, 1);
+        height: 90px;
+        display: flex;
+        align-items: center;
+
+        .hader__strip-text {
+            height: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 51px;
+        }
+
+        &-centertext {
+            font-weight: 700;
+            font-size: 30px;
+            color: black;
+        }
+    }
 }
 
 .header__content {
@@ -99,6 +120,8 @@ body {
     background: rgba(32, 32, 39, 1);
     cursor: pointer;
     font-size: 24px;
+    font-weight: 600;
+    line-height: 142%;
     color: white;
     transition: transform 0.2s ease;
 
@@ -139,7 +162,7 @@ body {
         gap: 18px;
         position: absolute;
         left: 40px;
-        z-index: 1;
+        z-index: -1;
     }
 
 
@@ -185,6 +208,15 @@ body {
         &-img {
             margin-bottom: 32px;
         }
+
+        &-fist {
+            position: absolute;
+            padding-top: 95px;
+            padding-left: 132px;
+            font-weight: 800;
+            font-size: 82px;
+            z-index: 3;
+        }
     }
 
     .main__link:hover {
@@ -199,6 +231,7 @@ body {
 
     .numbertwo,
     .numberfive {
+        position: relative;
         height: 512px;
     }
 
