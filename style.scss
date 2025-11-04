@@ -57,6 +57,7 @@ body {
         display: flex;
         position: absolute;
         right: 0px;
+        top: 0;
         z-index: 1;
     }
 
@@ -66,7 +67,7 @@ body {
         display: flex;
         align-items: center;
 
-        .hader__strip-text {
+        .header__strip-text {
             height: 36px;
             display: flex;
             flex-wrap: wrap;
@@ -280,3 +281,20 @@ body {
     }
 
 }
+    // DISPLAY NONE FOR MOB
+    
+    .header__rightstar-mob {
+        display: none
+    }
+
+    .header__strip-starmob {
+        display: none;
+    }
+    .header__downstars_imgmobile   {
+        display: none
+    }
+    .header__upstars-mob    {
+        display: none
+    }
+
+@import 'mobile';
