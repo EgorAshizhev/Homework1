@@ -3,8 +3,19 @@
     .center {
         padding-left: calc(50% - 172px);
         padding-right: calc(50% - 172px);
+        overflow-x: hidden;
     }
-
+    .header {
+        position: relative;
+        height: 648px;
+        padding-top: 147px;
+    }
+    .header__biggreenstar-mob {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+    }
     .header__title {
         position: relative;
         font-size: 40px;
@@ -46,6 +57,7 @@
     .header__button {
         position: relative;
         width: 285px;
+        font-size: 16px;
 
         &-link {
             display: flex;
@@ -59,7 +71,7 @@
         bottom: 28px;
         display: flex;
 
-        &_imgmobile {
+        &-imgmobile {
             height: 64px;
             position: absolute;
             right: 34px;

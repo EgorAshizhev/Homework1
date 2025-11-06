@@ -11,6 +11,7 @@
 body {
     font-family: "Montserrat", "arial";
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 .center {
@@ -19,7 +20,7 @@ body {
 }
 
 .header {
-    height: 800px;
+    height: 710px;
     background-color: rgba(225, 255, 143, 1);
     background-size: cover;
     padding-top: 196px;
@@ -290,10 +291,13 @@ body {
     .header__strip-starmob {
         display: none;
     }
-    .header__downstars_imgmobile   {
+    .header__downstars-imgmobile   {
         display: none
     }
     .header__upstars-mob    {
+        display: none
+    }
+    .header__biggreenstar-mob   {
         display: none
     }
 

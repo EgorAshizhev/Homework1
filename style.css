@@ -7,6 +7,7 @@
 body {
   font-family: "Montserrat", "arial";
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 .center {
@@ -15,7 +16,7 @@ body {
 }
 
 .header {
-  height: 800px;
+  height: 710px;
   background-color: rgb(225, 255, 143);
   background-size: cover;
   padding-top: 196px;
@@ -256,7 +257,7 @@ body {
   display: none;
 }
 
-.header__downstars_imgmobile {
+.header__downstars-imgmobile {
   display: none;
 }
 
@@ -264,10 +265,26 @@ body {
   display: none;
 }
 
+.header__biggreenstar-mob {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .center {
     padding-left: calc(50% - 172px);
     padding-right: calc(50% - 172px);
+    overflow-x: hidden;
+  }
+  .header {
+    position: relative;
+    height: 648px;
+    padding-top: 147px;
+  }
+  .header__biggreenstar-mob {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
   }
   .header__title {
     position: relative;
@@ -302,6 +319,7 @@ body {
   .header__button {
     position: relative;
     width: 285px;
+    font-size: 16px;
   }
   .header__button-link {
     display: flex;
@@ -313,7 +331,7 @@ body {
     bottom: 28px;
     display: flex;
   }
-  .header__downstars_imgmobile {
+  .header__downstars-imgmobile {
     height: 64px;
     position: absolute;
     right: 34px;
