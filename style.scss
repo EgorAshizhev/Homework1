@@ -21,7 +21,7 @@ body {
 
 .header {
     height: 710px;
-    background-color: rgba(225, 255, 143, 1);
+    background-color: $maincolor-green;
     background-size: cover;
     padding-top: 196px;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ body {
     }
 
     &__strip {
-        background-color: rgba(188, 236, 48, 1);
+        background-color: $stripgreen-color;
         height: 90px;
         display: flex;
         align-items: center;
@@ -71,9 +71,10 @@ body {
         .header__strip-text {
             height: 36px;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             flex-direction: row;
             gap: 51px;
+            text-wrap-mode: nowrap;
         }
 
         &-centertext {
@@ -122,6 +123,7 @@ body {
     background: rgba(32, 32, 39, 1);
     cursor: pointer;
     font-size: 24px;
+    font-family: 'Montserrat';
     font-weight: 600;
     line-height: 142%;
     color: white;
@@ -282,23 +284,159 @@ body {
     }
 
 }
-    // DISPLAY NONE FOR MOB
-    
-    .header__rightstar-mob {
-        display: none
+
+//___________ мини игры__________
+
+.minigames {
+    position: relative;
+    background-color: $color-grey;
+
+    &__content {
+        padding-bottom: 144px;
     }
 
-    .header__strip-starmob {
-        display: none;
+    &__upstars {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 44px;
     }
-    .header__downstars-imgmobile   {
-        display: none
+
+    &__downstars {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        gap: 30px;
+        right: 45px;
+        bottom: 0;
+        padding-bottom: 45px;
     }
-    .header__upstars-mob    {
-        display: none
+
+    &__content-title {
+        padding-bottom: 72px;
+        padding-top: 46px;
+        font-weight: 700;
+        color: white;
+        font-size: 64px;
     }
-    .header__biggreenstar-mob   {
-        display: none
+
+    &__contentbox {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 30px;
+        max-width: 1200px;
+        height: 500px;
+        z-index: 3;
+
+        &-conteiner {
+            display: flex;
+            justify-content: center;
+            width: 530px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        &--box {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            padding-top: 72px;
+
+        }
+
+        &-disc {
+            font-weight: 400;
+            font-size: 24px;
+        }
+
+        &-button {
+            width: 247px;
+            height: 66px;
+            border-radius: 60px;
+            border: none;
+            background: rgba(32, 32, 39, 1);
+            cursor: pointer;
+            font-size: 24px;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            line-height: 142%;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+    }
+
+    &__link-fist {
+        transform: rotateZ(10deg);
+        position: absolute;
+        z-index: 3;
+        font-size: 117px;
+        padding-left: 234px;
+        padding-top: 146px;
+    }
+
+    .minigames__card-button:hover {
+        background-color: rgba(255, 255, 255, 0);
+        border: solid 1px black;
+        color: black;
+        transition-delay: 3ms;
+        transform: scale(1.1);
+    }
+
+}
+
+// ФУТЕР
+.footer {
+    height: 150px;
+    box-sizing: border-box;
+    background-color: $stripgreen-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__box-title {
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+// DISPLAY--NONE FOR MOB
+
+.header__rightstar-mob {
+    display: none
+}
+
+.header__strip-starmob {
+    display: none;
+}
+
+.header__downstars-imgmobile {
+    display: none
+}
+
+.header__upstars-mob {
+    display: none
+}
+
+.header__biggreenstar-mob {
+    display: none
+}
 
 @import 'mobile';
