@@ -55,13 +55,15 @@ body {
   top: 0;
   z-index: 1;
 }
-.header__strip {
+
+.animated {
   background-color: rgb(188, 236, 48);
   height: 90px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
-.header__strip .header__strip-text {
+.animated__strip-text {
   height: 36px;
   display: flex;
   flex-wrap: nowrap;
@@ -69,7 +71,7 @@ body {
   gap: 51px;
   text-wrap-mode: nowrap;
 }
-.header__strip-centertext {
+.animated-centertext {
   font-weight: 700;
   font-size: 30px;
   color: black;
@@ -367,7 +369,7 @@ body {
   display: none;
 }
 
-.header__strip-starmob {
+.animated__strip-starmob {
   display: none;
 }
 
@@ -413,18 +415,19 @@ body {
     top: 64px;
     left: 37px;
   }
-  .header__strip {
+  .animated {
     display: flex;
     height: 52px;
   }
-  .header__strip .header__strip-text {
+  .animated__strip-text {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .animated__strip-text .animated__strip-centertext {
+    display: flex;
     height: 20px;
     gap: 28px;
-  }
-  .header__strip .header__strip-centertext {
     font-weight: 700;
     font-size: 16px;
     color: black;

@@ -51,18 +51,18 @@
         </div>
     </header>
     <!-- ПОЛОСА АНИМАЦИИ -->
-    <div class="header__strip center">
-        <div class="header__strip-text">
-            <h1 class="header__strip-centertext">ВИКТОРИНА</h1>
-            <img class="header__stripstar" src="./img/Star.svg" alt="star">
-            <img class="header__strip-starmob" src="./img/starstripmob.svg" alt="star">
-            <h1 class="header__strip-centertext">УГАДАЙ ЧИСЛО</h1>
-            <img class="header__stripstar" src="./img/Star.svg" alt="star">
-            <img class="header__strip-starmob" src="./img/starstripmob.svg" alt="star">
-            <h1 class="header__strip-centertext">ПЕРЕВЕРНИ ТЕКСТ</h1>
-            <img class="header__stripstar" src="./img/Star.svg" alt="star">
-            <img class="header__strip-starmob" src="./img/starstripmob.svg" alt="star">
-            <h1 class="header__strip-centertext">ПРОСТАЯ АРИФМЕТИКА</h1>
+    <div class="animated center">
+        <div class="animated__strip-text">
+            <h1 class="animated__strip-centertext">ВИКТОРИНА</h1>
+            <img class="animated__stripstar" src="./img/Star.svg" alt="star">
+            <img class="animated__strip-starmob" src="./img/starstripmob.svg" alt="star">
+            <h1 class="animated__strip-centertext">УГАДАЙ ЧИСЛО</h1>
+            <img class="animated__stripstar" src="./img/Star.svg" alt="star">
+            <img class="animated__strip-starmob" src="./img/starstripmob.svg" alt="star">
+            <h1 class="animated__strip-centertext">ПЕРЕВЕРНИ ТЕКСТ</h1>
+            <img class="animated__stripstar" src="./img/Star.svg" alt="star">
+            <img class="animated__strip-starmob" src="./img/starstripmob.svg" alt="star">
+            <h1 class="animated__strip-centertext">ПРОСТАЯ АРИФМЕТИКА</h1>
         </div>
     </div>
     <div class="main center">
@@ -75,7 +75,7 @@
                 может поиграть каждый. <br> Все игры доступны для пользования.</h3>
             <div class="main__content">
                 <div class="main__flex">
-                    <a href="#" class="main__link">
+                    <a href="#guessthenumber" class="main__link">
                         <article class="main__product numberone">
                             <img class="main__link-img" src="./img/article1.svg" alt="карточка1">
                             <div class="main__underframe">
@@ -84,7 +84,7 @@
                             </div>
                         </article>
                     </a>
-                    <a href="#" class="main__link">
+                    <a href="#stone" class="main__link">
                         <article class="main__product numberfour">
                             <img class="main__link-img" src="./img/article4.svg" alt="карточка1">
                             <h1 class="main__link-fist">✊</h1>
@@ -96,7 +96,7 @@
                     </a>
                 </div>
                 <div class="main__flex">
-                    <a href="#" class="main__link">
+                    <a href="#arifmetic" class="main__link">
                         <article class="main__product numbertwo">
                             <img class="main__link-img" src="./img/article2.svg" alt="карточка1">
                             <div class="main__underframe">
@@ -105,7 +105,7 @@
                             </div>
                         </article>
                     </a>
-                    <a href="#" class="main__link">
+                    <a href="#victorine" class="main__link">
                         <article class="main__product numberfive">
                             <img class="main__link-img" src="./img/article5.svg" alt="карточка1">
                             <div class="main__underframe">
@@ -116,7 +116,7 @@
                     </a>
                 </div>
                 <div class="main__flex">
-                    <a href="#" class="main__link">
+                    <a href="#rotationtext" class="main__link">
                         <article class="main__product numberthree">
                             <img class="main__link-img" src="./img/article3.svg" alt="карточка1">
                             <div class="main__underframe">
@@ -125,7 +125,7 @@
                             </div>
                         </article>
                     </a>
-                    <a href="#" class="main__link">
+                    <a href="#generated" class="main__link">
                         <article class="main__product numbersix">
                             <img class="main__link-img" src="./img/article6.svg" alt="карточка1">
                             <div class="main__underframe">
@@ -151,7 +151,7 @@
                 <img src="./img/mainbiggreenstar.svg" alt="">
             </div>
             <div class="minigames__contentbox">
-                <article class="minigames__card">
+                <article class="minigames__card" id="guessthenumber">
                     <div class="minigames__card-conteiner">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Угадай число</h2>
@@ -163,7 +163,7 @@
                         <img class="minigames__card-img" src="./img/articlegames1.svg" alt="карточка1">
                     </div>
                 </article>
-                <article class="minigames__card" style="flex-direction: row-reverse;">
+                <article class="minigames__card" id="arifmetic" style="flex-direction: row-reverse;">
                     <div class="minigames__card-conteiner" style="justify-content: flex-start;">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Простая арифметика</h2>
@@ -175,7 +175,7 @@
                         <img class="minigames__card-img" src="./img/articlegames2.svg" alt="карточка2">
                     </div>
                 </article>
-                <article class="minigames__card">
+                <article class="minigames__card" id="rotationtext">
                     <div class="minigames__card-conteiner">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Переверни текст</h2>
@@ -187,7 +187,7 @@
                         <img class="minigames__card-img" src="./img/articlegames3.svg" alt="карточка3">
                     </div>
                 </article>
-                <article class="minigames__card" style="flex-direction: row-reverse;">
+                <article class="minigames__card" id="stone" style="flex-direction: row-reverse;">
                     <div class="minigames__card-conteiner" style="justify-content: flex-start;">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Камень, <br> ножницы, <br> бумага</h2>
@@ -200,7 +200,7 @@
                         <img class="minigames__card-img" src="./img/articlegames4.svg" alt="карточка4">
                     </div>
                 </article>
-                <article class="minigames__card">
+                <article class="minigames__card" id="victorine">
                     <div class="minigames__card-conteiner">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Простая <br> викторина</h2>
@@ -212,7 +212,7 @@
                         <img class="minigames__card-img" src="./img/articlegames5.svg" alt="карточка5">
                     </div>
                 </article>
-                <article class="minigames__card" style="flex-direction: row-reverse;">
+                <article class="minigames__card" id="generated" style="flex-direction: row-reverse;">
                     <div class="minigames__card-conteiner" style="justify-content: flex-start;">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Генератор <br>случайных <br>цветов</h2>
