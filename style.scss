@@ -403,6 +403,16 @@ body {
 
 }
 
+.reverse__one {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__two {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
 // ФУТЕР
 .footer {
     height: 150px;
@@ -422,7 +432,7 @@ body {
 // DISPLAY--NONE FOR MOB
 
 .header__rightstar-mob {
-    display: none
+    display: none;
 }
 
 .animated__strip-starmob {
@@ -430,15 +440,19 @@ body {
 }
 
 .header__downstars-imgmobile {
-    display: none
+    display: none;
 }
 
 .header__upstars-mob {
-    display: none
+    display: none;
 }
 
 .header__biggreenstar-mob {
-    display: none
+    display: none;
+}
+
+.minigames__card-imgmob {
+    display: none;
 }
 
 @import 'mobile';

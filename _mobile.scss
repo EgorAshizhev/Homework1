@@ -5,17 +5,20 @@
         padding-right: calc(50% - 172px);
         overflow-x: hidden;
     }
+
     .header {
         position: relative;
         height: 648px;
         padding-top: 147px;
     }
+
     .header__biggreenstar-mob {
         position: absolute;
         display: block;
         top: 0;
         right: 0;
     }
+
     .header__title {
         position: relative;
         font-size: 40px;
@@ -31,11 +34,13 @@
         top: 64px;
         left: 37px;
     }
-// ПОЛОСА АНИМАЦИИ
-.animated {
-    display: flex;
-    height: 52px;
-}
+
+    // ПОЛОСА АНИМАЦИИ
+    .animated {
+        display: flex;
+        height: 52px;
+    }
+
     .animated__strip-text {
         display: flex;
         flex-direction: row;
@@ -49,16 +54,7 @@
             font-size: 16px;
             color: black;
             text-wrap-mode: nowrap;
-
         }
-
-        // .animated__strip-centertext {
-        //     font-weight: 700;
-        //     font-size: 16px;
-        //     color: black;
-        //     text-wrap-mode: nowrap;
-        // }
-
     }
 
     .header__button {
@@ -116,7 +112,91 @@
     .header__downstars-desktop {
         display: none;
     }
-    .header__upstars    {
+
+    .header__upstars {
         display: none;
     }
+
+    .minigames__card-img {
+        display: none;
+    }
+
+    // МИНИ ИГРЫ
+    .minigames__content {
+        padding-bottom: 10px;
+    }
+
+    .minigames__content-title {
+        font-size: 40px;
+    }
+
+    .minigames__card-title {
+        display: inline-block;
+        font-size: 32px;
+
+    }
+
+    .minigames__card {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: auto;
+        width: auto;
+
+        &-conteiner {
+            display: flex;
+            flex-direction: column;
+            max-height: 71vh;
+            width: auto;
+            padding-bottom: 32px;
+        }
+
+        &-imgmob {
+            display: block;
+        }
+
+        &-disc {
+            font-size: 4vw;
+            display: inline-block;
+
+        }
+
+        &-button {
+            width: 285px;
+            height: 55px;
+            font-size: 16px;
+        }
+
+        &--box {
+            display: flex;
+            padding-top: 30px;
+            gap: 16px;
+        }
+    }
+
+    .reverse__one {
+        width: auto;
+        height: auto;
+
+        &__two {
+            width: auto;
+            height: auto;
+
+        }
+    }
+
+    .minigames__link-fist {
+        transform: rotateZ(10deg);
+        position: absolute;
+        z-index: 3;
+        font-size: 117px;
+        padding-left: 97px;
+        padding-top: 48px;
+    }
+
+    .minigames__downstars {
+        display: none;
+    }
+
 }
