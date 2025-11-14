@@ -147,10 +147,11 @@ body {
 .main {
     position: relative;
     box-sizing: border-box;
-    height: 1470px;
     background-color: $color-grey;
     padding-top: 94px;
     z-index: 5;
+    display: flex;
+    justify-content: center;
 
     &__rightstar {
         box-sizing: border-box;
@@ -187,15 +188,12 @@ body {
     }
 
     &__content {
-        display: flex;
+        display: grid;
+        justify-items: stretch;
+        grid-template-columns: repeat(3, 387px);
         gap: 32px;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: center;
         padding: 20px;
         padding-top: 72px;
-        max-height: 1470px;
-        width: 1201px;
     }
 
     &__flex {
