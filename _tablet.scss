@@ -1,10 +1,30 @@
-@media (max-width: 1210px) {
+@media (min-width: 836px) and (max-width: 1210px) {
     .center {
         padding-left: calc(50% - 395px);
         padding-right: calc(50% - 395px);
     }
-
-
+    .main .numberone {
+        height: 551px;
+    }
+    .main .numberthree {
+        height: 551px;
+    }
+    .main .numberfive {
+        height: 551px;
+    }
+    .main .numbertwo {
+        height: 551px;
+    }
+    .main__content {
+        display: grid;
+        justify-items: stretch;
+        grid-template-columns: repeat(2, 381px);
+        justify-content: center;
+        padding-bottom: 32px;
+    }
+    .minigames  {
+        display: none;
+    }
 }
 
 @media (min-width: 766px) and (max-width: 835px) {
@@ -21,9 +41,10 @@
     .main__content {
         display: grid;
         justify-items: stretch;
-        grid-template-columns: repeat(1, 381px);
+        grid-template-columns: repeat(2, 381px);
         justify-content: center;
     }
+    
 
     .header__title {
         position: relative;

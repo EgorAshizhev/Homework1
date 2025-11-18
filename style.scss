@@ -70,6 +70,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
 
     &__strip-text {
         height: 36px;
@@ -146,13 +147,11 @@ body {
 
 .main {
     position: relative;
-    box-sizing: border-box;
     background-color: $color-grey;
     padding-top: 94px;
     z-index: 5;
-    display: flex;
-    justify-content: center;
-
+    display: grid;
+    justify-items: center;
     &__rightstar {
         box-sizing: border-box;
         display: flex;
@@ -189,22 +188,18 @@ body {
 
     &__content {
         display: grid;
-        justify-items: stretch;
-        grid-template-columns: repeat(3, 387px);
+        grid-template-columns: repeat(3, 1fr);
         gap: 32px;
-        padding: 20px;
+        align-items: end;
         padding-top: 72px;
     }
+    // &__product {
+    //     height: 23vh;
+    // }
 
-    &__flex {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-    }
+    
 
     &__link {
-        display: flex;
-        align-items: flex-start;
         text-decoration: none;
         width: 378px;
         transition: transform 0.2s ease;
@@ -228,21 +223,23 @@ body {
         transform: scale(1.1);
     }
 
-    .numberfour,
-    .numbersix {
-        height: 551px;
-    }
+    
 
-    .numbertwo,
-    .numberfive {
+    .numberone, .numberthree {
         position: relative;
-        height: 512px;
-    }
-
-    .numberone,
-    .numberthree {
         height: 473px;
     }
+
+    .numbertwo, .numberfive {
+        height: 512px;
+    }
+    .numberfour, .numbersix {
+        height: 551px;
+    }
+     .main .numbertwo {
+        padding-top: 21px;
+    }
+
 
     &__underframe {
         height: 91px;

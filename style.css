@@ -62,6 +62,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 .animated__strip-text {
   height: 36px;
@@ -131,12 +132,11 @@ body {
 
 .main {
   position: relative;
-  box-sizing: border-box;
   background-color: rgb(32, 32, 39);
   padding-top: 94px;
   z-index: 5;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
 }
 .main__rightstar {
   box-sizing: border-box;
@@ -169,20 +169,12 @@ body {
 }
 .main__content {
   display: grid;
-  justify-items: stretch;
-  grid-template-columns: repeat(3, 387px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  padding: 20px;
+  align-items: end;
   padding-top: 72px;
 }
-.main__flex {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
 .main__link {
-  display: flex;
-  align-items: flex-start;
   text-decoration: none;
   width: 378px;
   transition: transform 0.2s ease;
@@ -202,18 +194,18 @@ body {
   transition-delay: 3ms;
   transform: scale(1.1);
 }
-.main .numberfour,
-.main .numbersix {
-  height: 551px;
-}
-.main .numbertwo,
-.main .numberfive {
+.main .numberone, .main .numberthree {
   position: relative;
+  height: 473px;
+}
+.main .numbertwo, .main .numberfive {
   height: 512px;
 }
-.main .numberone,
-.main .numberthree {
-  height: 473px;
+.main .numberfour, .main .numbersix {
+  height: 551px;
+}
+.main .main .numbertwo {
+  padding-top: 21px;
 }
 .main__underframe {
   height: 91px;
@@ -557,10 +549,32 @@ body {
     display: none;
   }
 }
-@media (max-width: 1210px) {
+@media (min-width: 836px) and (max-width: 1210px) {
   .center {
     padding-left: calc(50% - 395px);
     padding-right: calc(50% - 395px);
+  }
+  .main .numberone {
+    height: 551px;
+  }
+  .main .numberthree {
+    height: 551px;
+  }
+  .main .numberfive {
+    height: 551px;
+  }
+  .main .numbertwo {
+    height: 551px;
+  }
+  .main__content {
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(2, 381px);
+    justify-content: center;
+    padding-bottom: 32px;
+  }
+  .minigames {
+    display: none;
   }
 }
 @media (min-width: 766px) and (max-width: 835px) {
@@ -575,7 +589,7 @@ body {
   .main__content {
     display: grid;
     justify-items: stretch;
-    grid-template-columns: repeat(1, 381px);
+    grid-template-columns: repeat(2, 381px);
     justify-content: center;
   }
   .header__title {
