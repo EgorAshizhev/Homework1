@@ -152,6 +152,7 @@ body {
     z-index: 5;
     display: grid;
     justify-items: center;
+
     &__rightstar {
         box-sizing: border-box;
         display: flex;
@@ -190,14 +191,15 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
-        align-items: end;
         padding-top: 72px;
+        row-gap: 0px;
     }
+
     // &__product {
     //     height: 23vh;
     // }
 
-    
+
 
     &__link {
         text-decoration: none;
@@ -223,23 +225,23 @@ body {
         transform: scale(1.1);
     }
 
-    
 
-    .numberone, .numberthree {
+
+    .numberone,
+    .numberthree {
         position: relative;
         height: 473px;
     }
 
-    .numbertwo, .numberfive {
+    .numbertwo,
+    .numberfive {
         height: 512px;
     }
-    .numberfour, .numbersix {
+
+    .numberfour,
+    .numbersix {
         height: 551px;
     }
-     .main .numbertwo {
-        padding-top: 21px;
-    }
-
 
     &__underframe {
         height: 91px;

@@ -171,8 +171,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  align-items: end;
   padding-top: 72px;
+  row-gap: 0px;
 }
 .main__link {
   text-decoration: none;
@@ -194,18 +194,18 @@ body {
   transition-delay: 3ms;
   transform: scale(1.1);
 }
-.main .numberone, .main .numberthree {
+.main .numberone,
+.main .numberthree {
   position: relative;
   height: 473px;
 }
-.main .numbertwo, .main .numberfive {
+.main .numbertwo,
+.main .numberfive {
   height: 512px;
 }
-.main .numberfour, .main .numbersix {
+.main .numberfour,
+.main .numbersix {
   height: 551px;
-}
-.main .main .numbertwo {
-  padding-top: 21px;
 }
 .main__underframe {
   height: 91px;
@@ -561,6 +561,7 @@ body {
     height: 551px;
   }
   .main .numberfive {
+    padding-bottom: 32px;
     height: 551px;
   }
   .main .numbertwo {
