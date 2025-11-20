@@ -176,3 +176,132 @@ while (day <= 31) {
         console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
         day += 7;
 }
+
+//____________hw-5____________
+
+// Задиние по макету
+function startGame() {
+        const secretNumber = Math.floor(Math.random() * 100) + 1;
+
+        let guess = null;
+
+        while (guess !== secretNumber) {
+                guess = Number(prompt("Угадайте число от 1 до 100"));
+
+                if (Number.isNaN(guess)) {
+                        alert("Введите число.");
+                        continue;
+                }
+
+                if (guess > secretNumber) {
+                        alert("Загаданное число меньше");
+                } else if (guess < secretNumber) {
+                        alert("Загаданное число больше");
+                }
+        }
+
+        alert("Вы угадали!");
+}
+
+// Задание 1
+function getMin(a, b) {
+        return a < b ? a : b;
+}
+
+console.log(getMin(8, 4));
+console.log(getMin(6, 6));
+console.log(getMin(10, 25));
+console.log(getMin(3, -5));
+
+// Задание 2
+function checkNumber(n) {
+        if (n % 2 === 0) {
+                return 'Число четное';
+        } else {
+                return 'Число нечетное';
+        }
+}
+
+console.log(checkNumber(10));
+console.log(checkNumber(7));
+// Задание 3
+function printSquare(n) {
+
+        console.log(n * n);
+}
+
+printSquare(5);
+
+function getSquare(n) {
+        return n * n;
+}
+
+let result = getSquare(6);
+console.log(result);
+//Задание 4
+
+function askAge() {
+        const input = prompt("Сколько вам лет?");
+
+        if (input === null || input.trim() === "") {
+                alert("Вы ввели неправильное значение");
+                return;
+        }
+
+        const age = Number(input.trim());
+
+        if (!Number.isFinite(age)) {
+                alert("Вы ввели неправильное значение");
+                return;
+        }
+
+        if (age < 0) {
+                alert("Вы ввели неправильное значение");
+        } else if (age >= 0 && age <= 12) {
+                alert("Привет, друг!");
+        } else {
+                alert("Добро пожаловать!");
+        }
+}
+
+askAge();
+// Задание 5
+function multiplyNumbers(a, b) {
+
+        const num1 = Number(a);
+        const num2 = Number(b);
+
+        if (isNaN(num1) || isNaN(num2)) {
+                return 'Одно или оба значения не являются числом';
+        }
+
+        return num1 * num2;
+}
+
+console.log(multiplyNumbers(5, 10));
+console.log(multiplyNumbers("7", "3"));
+console.log(multiplyNumbers(4, "abc"));
+console.log(multiplyNumbers("xyz", 2));
+
+//задиние 6
+function cubeNumber() {
+
+        const input = prompt("Введите число:");
+
+        const n = Number(input);
+
+        if (Number.isNaN(n)) {
+                alert("Переданный параметр не является числом");
+        }
+
+        const cube = Math.pow(n, 3);
+
+        alert(`${n} в кубе равняется ${cube}`);
+        return;
+}
+
+cubeNumber();
+
+
+
+
