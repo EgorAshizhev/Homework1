@@ -181,28 +181,35 @@ while (day <= 31) {
 
 // Задиние по макету
 function startGame() {
-        const secretNumber = Math.floor(Math.random() * 100) + 1;
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
 
-        let guess = null;
+    let guess = null;
 
-        while (guess !== secretNumber) {
-                guess = Number(prompt("Угадайте число от 1 до 100"));
+    while (true) {
+        const input = prompt("Угадайте число от 1 до 100");
 
-                if (Number.isNaN(guess)) {
-                        alert("Введите число.");
-                        continue;
-                }
-
-                if (guess > secretNumber) {
-                        alert("Загаданное число меньше");
-                } else if (guess < secretNumber) {
-                        alert("Загаданное число больше");
-                }
+        if (input === null) {
+            alert("Игра отменена.");
+            return;
         }
 
-        alert("Вы угадали!");
-}
+        guess = Number(input);
 
+        if (Number.isNaN(guess)) {
+            alert("Введите число.");
+            continue;
+        }
+
+        if (guess > secretNumber) {
+            alert("Загаданное число меньше");
+        } else if (guess < secretNumber) {
+            alert("Загаданное число больше");
+        } else {
+            alert("Вы угадали!");
+            return;
+        }
+    }
+}
 // Задание 1
 function getMin(a, b) {
         return a < b ? a : b;
@@ -301,6 +308,26 @@ function cubeNumber() {
 }
 
 cubeNumber();
+// Задание 7
+const circle1 = {
+    radius: 5,
+    getArea() {
+        return Math.PI * this.radius ** 2;
+    },
+    getPerimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+const circle2 = {
+    radius: 10,
+    getArea() {
+        return Math.PI * this.radius ** 2;
+    },
+    getPerimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+};
 
 
 
