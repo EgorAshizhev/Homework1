@@ -180,35 +180,35 @@ while (day <= 31) {
 //____________hw-5____________
 
 // Задиние по макету
-function startGame() {
-    const secretNumber = Math.floor(Math.random() * 100) + 1;
+function startGamenumberGuess() {
+        const secretNumber = Math.floor(Math.random() * 100) + 1;
 
-    let guess = null;
+        let guess = null;
 
-    while (true) {
-        const input = prompt("Угадайте число от 1 до 100");
+        while (true) {
+                const input = prompt("Угадайте число от 1 до 100");
 
-        if (input === null) {
-            alert("Игра отменена.");
-            return;
+                if (input === null) {
+                        alert("Игра отменена.");
+                        return;
+                }
+
+                guess = Number(input);
+
+                if (Number.isNaN(guess)) {
+                        alert("Введите число.");
+                        continue;
+                }
+
+                if (guess > secretNumber) {
+                        alert("Загаданное число меньше");
+                } else if (guess < secretNumber) {
+                        alert("Загаданное число больше");
+                } else {
+                        alert("Вы угадали!");
+                        return;
+                }
         }
-
-        guess = Number(input);
-
-        if (Number.isNaN(guess)) {
-            alert("Введите число.");
-            continue;
-        }
-
-        if (guess > secretNumber) {
-            alert("Загаданное число меньше");
-        } else if (guess < secretNumber) {
-            alert("Загаданное число больше");
-        } else {
-            alert("Вы угадали!");
-            return;
-        }
-    }
 }
 // Задание 1
 function getMin(a, b) {
@@ -310,24 +310,186 @@ function cubeNumber() {
 cubeNumber();
 // Задание 7
 const circle1 = {
-    radius: 5,
-    getArea() {
-        return Math.PI * this.radius ** 2;
-    },
-    getPerimeter() {
-        return 2 * Math.PI * this.radius;
-    }
+        radius: 5,
+        getArea() {
+                return Math.PI * this.radius ** 2;
+        },
+        getPerimeter() {
+                return 2 * Math.PI * this.radius;
+        }
 };
 
 const circle2 = {
-    radius: 10,
-    getArea() {
-        return Math.PI * this.radius ** 2;
-    },
-    getPerimeter() {
-        return 2 * Math.PI * this.radius;
-    }
+        radius: 10,
+        getArea() {
+                return Math.PI * this.radius ** 2;
+        },
+        getPerimeter() {
+                return 2 * Math.PI * this.radius;
+        }
 };
+
+// hw-6
+// Задание по макету
+function simpleArithmetic() {
+        while (true) {
+                const num1 = Math.floor(Math.random() * 20) + 1;
+                const num2 = Math.floor(Math.random() * 20) + 1;
+
+                const ops = ["+", "-", "*", "/"];
+                const op = ops[Math.floor(Math.random() * ops.length)];
+
+                let correct;
+                if (op === "+") correct = num1 + num2;
+                if (op === "-") correct = num1 - num2;
+                if (op === "*") correct = num1 * num2;
+                if (op === "/") correct = num1 / num2;
+
+                const input = prompt(`${num1} ${op} ${num2} = ? (Отмена — выйти из игры)`);
+
+                if (input === null) break;
+
+                const userAnswer = Number(input);
+
+                if (userAnswer === correct) {
+                        alert("Верно!");
+                } else {
+                        alert(`Неверно. Правильный ответ: ${correct}`);
+                }
+        }
+}
+
+
+// Задание 1
+const arr = [1, 5, 4, 10, 0, 3];
+
+for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+        if (arr[i] === 10) break;
+}
+
+// Задание 2
+const arrIndex = [1, 5, 4, 10, 0, 3];
+
+const index = arrIndex.indexOf(4);
+
+console.log(index);
+
+// Задание 3
+const arrJoin = [1, 3, 5, 10, 20];
+
+console.log(arrJoin.join(' '));
+
+// Задание 4
+const resultMassive = [];
+
+for (let i = 0; i < 3; i++) {
+        const row = [];
+        for (let j = 0; j < 3; j++) {
+                row.push(1);
+        }
+        resultMassive.push(row);
+}
+
+console.log(resultMassive);
+
+// Задание 5
+const arrFive = [1, 1, 1];
+
+arr.push(2, 2, 2);
+
+console.log(arrFive);
+
+// Задание 6
+let arrDelete = [9, 8, 7, 'a', 6, 5];
+
+// сортировка
+arrDelete = arr.sort();
+
+// удаление 'a'
+arrDelete = arr.filter(item => item !== 'a');
+
+console.log(arrDelete);
+// Задание 7
+const arrGuess = [9, 8, 7, 6, 5];
+
+const userInput = prompt("Введите число");
+
+const numGuess = Number(userInput);
+
+if (arrGuess.includes(numGuess)) {
+        alert("Угадал");
+} else {
+        alert("Не угадал");
+}
+
+// Задание 8
+const str = 'abcdef';
+
+const reversed = str.split('').reverse().join('');
+
+console.log(reversed);
+
+// Задание 9
+const arrSpread = [[1, 2, 3], [4, 5, 6]];
+
+const flattened = [].concat(...arrSpread);
+
+console.log(flattened);
+
+// Задание 10
+const arrRandom = [2, 5, 3, 7, 1];
+for (let i = 0; i < arr.length - 1; i++) {
+        console.log(arrRandom[i] + arrRandom[i + 1]);
+}
+// Задание 11
+function squareArray(arr) {
+        return arr.map(num => num ** 2);
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const squares = squareArray(numbers);
+
+console.log(squares);
+
+// Задание 12
+function getLengths(arr) {
+        return arr.map(str => str.length);
+}
+
+const words = ["apple", "banana", "kiwi"];
+const lengths = getLengths(words);
+
+console.log(lengths);
+
+// Задание 13
+function getNegativeNumbers(arr) {
+        return arr.filter(num => num < 0);
+}
+
+const numbersInnit = [3, -2, 5, -7, 0, 4];
+const negatives = getNegativeNumbers(numbersInnit);
+
+console.log(negatives);
+
+// Задание 14
+
+const arrNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 11));
+
+const evenNumbers = arrNumbers.filter(num => num % 2 === 0);
+
+console.log("Исходный массив:", arrNumbers);
+console.log("Четные числа:", evenNumbers);
+
+// Задание 15
+const arrMath = Array.from({ length: 6 }, () => Math.floor(Math.random() * 10) + 1);
+
+const sum = arrMath.reduce((acc, num) => acc + num, 0);
+
+const average = sum / arrMath.length;
+
+console.log("Массив:", arrMath);
+console.log("Среднее арифметическое:", average);
 
 
 
