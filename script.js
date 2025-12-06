@@ -332,31 +332,39 @@ const circle2 = {
 // hw-6
 // Задание по макету
 function simpleArithmetic() {
-        while (true) {
-                const num1 = Math.floor(Math.random() * 20) + 1;
-                const num2 = Math.floor(Math.random() * 20) + 1;
+    while (true) {
+        let num1 = Math.floor(Math.random() * 20) + 1;
+        let num2 = Math.floor(Math.random() * 20) + 1;
 
-                const ops = ["+", "-", "*", "/"];
-                const op = ops[Math.floor(Math.random() * ops.length)];
+        const ops = ["+", "-", "*", "/"];
+        const op = ops[Math.floor(Math.random() * ops.length)];
 
-                let correct;
-                if (op === "+") correct = num1 + num2;
-                if (op === "-") correct = num1 - num2;
-                if (op === "*") correct = num1 * num2;
-                if (op === "/") correct = num1 / num2;
-
-                const input = prompt(`${num1} ${op} ${num2} = ? (Отмена — выйти из игры)`);
-
-                if (input === null) break;
-
-                const userAnswer = Number(input);
-
-                if (userAnswer === correct) {
-                        alert("Верно!");
-                } else {
-                        alert(`Неверно. Правильный ответ: ${correct}`);
-                }
+        if (op === "/") {
+        
+            while (num1 % num2 !== 0) {
+                num1 = Math.floor(Math.random() * 20) + 1;
+                num2 = Math.floor(Math.random() * 20) + 1;
+            }
         }
+        
+        let correct;
+        if (op === "+") correct = num1 + num2;
+        if (op === "-") correct = num1 - num2;
+        if (op === "*") correct = num1 * num2;
+        if (op === "/") correct = num1 / num2;
+
+        const input = prompt(`${num1} ${op} ${num2} = ? (Отмена — выйти из игры)`);
+
+        if (input === null) break;
+
+        const userAnswer = Number(input);
+
+        if (userAnswer === correct) {
+            alert("Верно!");
+        } else {
+            alert(`Неверно. Правильный ответ: ${correct}`);
+        }
+    }
 }
 
 
@@ -396,7 +404,7 @@ console.log(resultMassive);
 // Задание 5
 const arrFive = [1, 1, 1];
 
-arr.push(2, 2, 2);
+arrFive.push(2, 2, 2);
 
 console.log(arrFive);
 
@@ -438,9 +446,14 @@ const flattened = [].concat(...arrSpread);
 console.log(flattened);
 
 // Задание 10
-const arrRandom = [2, 5, 3, 7, 1];
-for (let i = 0; i < arr.length - 1; i++) {
-        console.log(arrRandom[i] + arrRandom[i + 1]);
+const arrTen = [];
+
+for (let i = 0; i < 10; i++) {
+    arrTen.push(Math.floor(Math.random() * 10) + 1);
+}
+
+for (let i = 0; i < arrTen.length - 1; i++) {
+    console.log(arrTen[i] + arrTen[i + 1]);
 }
 // Задание 11
 function squareArray(arr) {
