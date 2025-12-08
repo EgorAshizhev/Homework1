@@ -247,31 +247,31 @@ let result = getSquare(6);
 console.log(result);
 //Задание 4
 
-function askAge() {
-        const input = prompt("Сколько вам лет?");
+// function askAge() {
+//         const input = prompt("Сколько вам лет?");
 
-        if (input === null || input.trim() === "") {
-                alert("Вы ввели неправильное значение");
-                return;
-        }
+//         if (input === null || input.trim() === "") {
+//                 alert("Вы ввели неправильное значение");
+//                 return;
+//         }
 
-        const age = Number(input.trim());
+//         const age = Number(input.trim());
 
-        if (!Number.isFinite(age)) {
-                alert("Вы ввели неправильное значение");
-                return;
-        }
+//         if (!Number.isFinite(age)) {
+//                 alert("Вы ввели неправильное значение");
+//                 return;
+//         }
 
-        if (age < 0) {
-                alert("Вы ввели неправильное значение");
-        } else if (age >= 0 && age <= 12) {
-                alert("Привет, друг!");
-        } else {
-                alert("Добро пожаловать!");
-        }
-}
+//         if (age < 0) {
+//                 alert("Вы ввели неправильное значение");
+//         } else if (age >= 0 && age <= 12) {
+//                 alert("Привет, друг!");
+//         } else {
+//                 alert("Добро пожаловать!");
+//         }
+// }
 
-askAge();
+// askAge();
 // Задание 5
 function multiplyNumbers(a, b) {
 
@@ -368,142 +368,259 @@ function simpleArithmetic() {
 }
 
 
-// Задание 1
-const arr = [1, 5, 4, 10, 0, 3];
+// // Задание 1
+// const arr = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
-        if (arr[i] === 10) break;
+// for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i]);
+//         if (arr[i] === 10) break;
+// }
+
+// // Задание 2
+// const arrIndex = [1, 5, 4, 10, 0, 3];
+
+// const index = arrIndex.indexOf(4);
+
+// console.log(index);
+
+// // Задание 3
+// const arrJoin = [1, 3, 5, 10, 20];
+
+// console.log(arrJoin.join(' '));
+
+// // Задание 4
+// const resultMassive = [];
+
+// for (let i = 0; i < 3; i++) {
+//         const row = [];
+//         for (let j = 0; j < 3; j++) {
+//                 row.push(1);
+//         }
+//         resultMassive.push(row);
+// }
+
+// console.log(resultMassive);
+
+// // Задание 5
+// const arrFive = [1, 1, 1];
+
+// arrFive.push(2, 2, 2);
+
+// console.log(arrFive);
+
+// // Задание 6
+// let arrDelete = [9, 8, 7, 'a', 6, 5];
+
+
+// arrDelete = arr.sort();
+
+// //
+// arrDelete = arr.filter(item => item !== 'a');
+
+// console.log(arrDelete);
+// // Задание 7
+// const arrGuess = [9, 8, 7, 6, 5];
+
+// const userInput = prompt("Введите число");
+
+// const numGuess = Number(userInput);
+
+// if (arrGuess.includes(numGuess)) {
+//         alert("Угадал");
+// } else {
+//         alert("Не угадал");
+// }
+
+// // Задание 8
+// const str = 'abcdef';
+
+// const reversed = str.split('').reverse().join('');
+
+// console.log(reversed);
+
+// // Задание 9
+// const arrSpread = [[1, 2, 3], [4, 5, 6]];
+
+// const flattened = [].concat(...arrSpread);
+
+// console.log(flattened);
+
+// // Задание 10
+// const arrTen = [];
+
+// for (let i = 0; i < 10; i++) {
+//     arrTen.push(Math.floor(Math.random() * 10) + 1);
+// }
+
+// for (let i = 0; i < arrTen.length - 1; i++) {
+//     console.log(arrTen[i] + arrTen[i + 1]);
+// }
+// // Задание 11
+// function squareArray(arr) {
+//         return arr.map(num => num ** 2);
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+// const squares = squareArray(numbers);
+
+// console.log(squares);
+
+// // Задание 12
+// function getLengths(arr) {
+//         return arr.map(str => str.length);
+// }
+
+// const words = ["apple", "banana", "kiwi"];
+// const lengths = getLengths(words);
+
+// console.log(lengths);
+
+// // Задание 13
+// function getNegativeNumbers(arr) {
+//         return arr.filter(num => num < 0);
+// }
+
+// const numbersInnit = [3, -2, 5, -7, 0, 4];
+// const negatives = getNegativeNumbers(numbersInnit);
+
+// console.log(negatives);
+
+// // Задание 14
+
+// const arrNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 11));
+
+// const evenNumbers = arrNumbers.filter(num => num % 2 === 0);
+
+// console.log("Исходный массив:", arrNumbers);
+// console.log("Четные числа:", evenNumbers);
+
+// // Задание 15
+// const arrMath = Array.from({ length: 6 }, () => Math.floor(Math.random() * 10) + 1);
+
+// const sum = arrMath.reduce((acc, num) => acc + num, 0);
+
+// const average = sum / arrMath.length;
+
+// console.log("Массив:", arrMath);
+// console.log("Среднее арифметическое:", average);
+
+
+                                // hw-7
+                                // задание по макету(переверни текст)
+function flipText() {
+  const text = prompt("Введите текст:");
+
+  if (text === null) {
+    alert("Ввод отменён");
+    return;
+  }
+
+  const reversed = text.split('').reverse().join('');
+  alert("Перевернутый текст: " + reversed);
 }
+
+                // Задание по макету(викторина)
+function startQuiz() {
+const quiz = [
+    {
+        question: "Какого цвета небо?",
+        options: ["1. Красного", "2. Синего", "3. Зелёного"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+];
+
+    let score = 0;
+
+    for (let i = 0; i < quiz.length; i++) {
+        const q = quiz[i];
+
+        const userAnswer = prompt(
+            q.question + "\n" + q.options.join("\n")
+        );
+
+        if (Number(userAnswer) === q.correctAnswer) {
+            score++;
+        }
+    }
+
+    alert("Правильных ответов: " + score + " из " + quiz.length);
+}
+
+// Задание 1
+ let str = 'js';
+
+ str = str.toUpperCase();
+
+ console.log(str);
 
 // Задание 2
-const arrIndex = [1, 5, 4, 10, 0, 3];
+function filter(arr, str) {
+        const lowerStr = str.toLowerCase();
+        return arr.filter(item=>item.toLowerCase().startsWith(lowerStr));
+}
 
-const index = arrIndex.indexOf(4);
-
-console.log(index);
+console.log(filter(['JavaScript', 'Java', 'Python'], 'ja'))
 
 // Задание 3
-const arrJoin = [1, 3, 5, 10, 20];
-
-console.log(arrJoin.join(' '));
+let Num = 32.58884;
+console.log(Math.floor(Num));
+console.log(Math.round(Num));
+console.log(Math.ceil(Num));
 
 // Задание 4
-const resultMassive = [];
-
-for (let i = 0; i < 3; i++) {
-        const row = [];
-        for (let j = 0; j < 3; j++) {
-                row.push(1);
-        }
-        resultMassive.push(row);
-}
-
-console.log(resultMassive);
+console.log(Math.min(52, 53, 49, 77, 21, 32));
+console.log(Math.max(52, 53, 49, 77, 21, 32));
 
 // Задание 5
-const arrFive = [1, 1, 1];
-
-arrFive.push(2, 2, 2);
-
-console.log(arrFive);
-
-// Задание 6
-let arrDelete = [9, 8, 7, 'a', 6, 5];
-
-// сортировка
-arrDelete = arr.sort();
-
-// удаление 'a'
-arrDelete = arr.filter(item => item !== 'a');
-
-console.log(arrDelete);
-// Задание 7
-const arrGuess = [9, 8, 7, 6, 5];
-
-const userInput = prompt("Введите число");
-
-const numGuess = Number(userInput);
-
-if (arrGuess.includes(numGuess)) {
-        alert("Угадал");
-} else {
-        alert("Не угадал");
+function getRandomNumber() {
+        return Math.floor(Math.random() *10) +1;
 }
-
+console.log(getRandomNumber());
+//  Задание 6
+function getRandomNumbers(num) {
+        return Array.from({ length: Math.floor(num /2) }, () => Math.floor(Math.random() * num));
+}
+console.log(getRandomNumbers(10));
+// Задание 7
+function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomInt(1 ,10));
 // Задание 8
-const str = 'abcdef';
-
-const reversed = str.split('').reverse().join('');
-
-console.log(reversed);
-
+console.log(new Date());
 // Задание 9
-const arrSpread = [[1, 2, 3], [4, 5, 6]];
-
-const flattened = [].concat(...arrSpread);
-
-console.log(flattened);
+const currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 73);
+console.log(currentDate);
 
 // Задание 10
-const arrTen = [];
+function formatDate(date) {
+    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const months = [
+        "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    ];
 
-for (let i = 0; i < 10; i++) {
-    arrTen.push(Math.floor(Math.random() * 10) + 1);
+    const year = date.getFullYear();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const dayOfWeek = days[date.getDay()];
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    return `
+Дата : ${day} ${months[month]} ${year} — это ${dayOfWeek}.
+Время : ${hours}:${minutes}:${seconds}`;
 }
-
-for (let i = 0; i < arrTen.length - 1; i++) {
-    console.log(arrTen[i] + arrTen[i + 1]);
-}
-// Задание 11
-function squareArray(arr) {
-        return arr.map(num => num ** 2);
-}
-
-const numbers = [1, 2, 3, 4, 5];
-const squares = squareArray(numbers);
-
-console.log(squares);
-
-// Задание 12
-function getLengths(arr) {
-        return arr.map(str => str.length);
-}
-
-const words = ["apple", "banana", "kiwi"];
-const lengths = getLengths(words);
-
-console.log(lengths);
-
-// Задание 13
-function getNegativeNumbers(arr) {
-        return arr.filter(num => num < 0);
-}
-
-const numbersInnit = [3, -2, 5, -7, 0, 4];
-const negatives = getNegativeNumbers(numbersInnit);
-
-console.log(negatives);
-
-// Задание 14
-
-const arrNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 11));
-
-const evenNumbers = arrNumbers.filter(num => num % 2 === 0);
-
-console.log("Исходный массив:", arrNumbers);
-console.log("Четные числа:", evenNumbers);
-
-// Задание 15
-const arrMath = Array.from({ length: 6 }, () => Math.floor(Math.random() * 10) + 1);
-
-const sum = arrMath.reduce((acc, num) => acc + num, 0);
-
-const average = sum / arrMath.length;
-
-console.log("Массив:", arrMath);
-console.log("Среднее арифметическое:", average);
-
-
-
-
+console.log(formatDate(new Date()));
