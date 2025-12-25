@@ -332,39 +332,39 @@ const circle2 = {
 // hw-6
 // Задание по макету
 function simpleArithmetic() {
-    while (true) {
-        let num1 = Math.floor(Math.random() * 20) + 1;
-        let num2 = Math.floor(Math.random() * 20) + 1;
+        while (true) {
+                let num1 = Math.floor(Math.random() * 20) + 1;
+                let num2 = Math.floor(Math.random() * 20) + 1;
 
-        const ops = ["+", "-", "*", "/"];
-        const op = ops[Math.floor(Math.random() * ops.length)];
+                const ops = ["+", "-", "*", "/"];
+                const op = ops[Math.floor(Math.random() * ops.length)];
 
-        if (op === "/") {
-        
-            while (num1 % num2 !== 0) {
-                num1 = Math.floor(Math.random() * 20) + 1;
-                num2 = Math.floor(Math.random() * 20) + 1;
-            }
+                if (op === "/") {
+
+                        while (num1 % num2 !== 0) {
+                                num1 = Math.floor(Math.random() * 20) + 1;
+                                num2 = Math.floor(Math.random() * 20) + 1;
+                        }
+                }
+
+                let correct;
+                if (op === "+") correct = num1 + num2;
+                if (op === "-") correct = num1 - num2;
+                if (op === "*") correct = num1 * num2;
+                if (op === "/") correct = num1 / num2;
+
+                const input = prompt(`${num1} ${op} ${num2} = ? (Отмена — выйти из игры)`);
+
+                if (input === null) break;
+
+                const userAnswer = Number(input);
+
+                if (userAnswer === correct) {
+                        alert("Верно!");
+                } else {
+                        alert(`Неверно. Правильный ответ: ${correct}`);
+                }
         }
-        
-        let correct;
-        if (op === "+") correct = num1 + num2;
-        if (op === "-") correct = num1 - num2;
-        if (op === "*") correct = num1 * num2;
-        if (op === "/") correct = num1 / num2;
-
-        const input = prompt(`${num1} ${op} ${num2} = ? (Отмена — выйти из игры)`);
-
-        if (input === null) break;
-
-        const userAnswer = Number(input);
-
-        if (userAnswer === correct) {
-            alert("Верно!");
-        } else {
-            alert(`Неверно. Правильный ответ: ${correct}`);
-        }
-    }
 }
 
 
@@ -505,68 +505,68 @@ function simpleArithmetic() {
 // console.log("Среднее арифметическое:", average);
 
 
-                                // hw-7
-                                // задание по макету(переверни текст)
+// hw-7
+// задание по макету(переверни текст)
 function flipText() {
-  const text = prompt("Введите текст:");
+        const text = prompt("Введите текст:");
 
-  if (text === null) {
-    alert("Ввод отменён");
-    return;
-  }
+        if (text === null) {
+                alert("Ввод отменён");
+                return;
+        }
 
-  const reversed = text.split('').reverse().join('');
-  alert("Перевернутый текст: " + reversed);
+        const reversed = text.split('').reverse().join('');
+        alert("Перевернутый текст: " + reversed);
 }
 
-                // Задание по макету(викторина)
+// Задание по макету(викторина)
 function startQuiz() {
-const quiz = [
-    {
-        question: "Какого цвета небо?",
-        options: ["1. Красного", "2. Синего", "3. Зелёного"],
-        correctAnswer: 2
-    },
-    {
-        question: "Сколько дней в неделе?",
-        options: ["1. Шесть", "2. Семь", "3. Восемь"],
-        correctAnswer: 2
-    },
-    {
-        question: "Сколько у человека пальцев на одной руке?",
-        options: ["1. Четыре", "2. Пять", "3. Шесть"],
-        correctAnswer: 2
-    }
-];
+        const quiz = [
+                {
+                        question: "Какого цвета небо?",
+                        options: ["1. Красного", "2. Синего", "3. Зелёного"],
+                        correctAnswer: 2
+                },
+                {
+                        question: "Сколько дней в неделе?",
+                        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                        correctAnswer: 2
+                },
+                {
+                        question: "Сколько у человека пальцев на одной руке?",
+                        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                        correctAnswer: 2
+                }
+        ];
 
-    let score = 0;
+        let score = 0;
 
-    for (let i = 0; i < quiz.length; i++) {
-        const q = quiz[i];
+        for (let i = 0; i < quiz.length; i++) {
+                const q = quiz[i];
 
-        const userAnswer = prompt(
-            q.question + "\n" + q.options.join("\n")
-        );
+                const userAnswer = prompt(
+                        q.question + "\n" + q.options.join("\n")
+                );
 
-        if (Number(userAnswer) === q.correctAnswer) {
-            score++;
+                if (Number(userAnswer) === q.correctAnswer) {
+                        score++;
+                }
         }
-    }
 
-    alert("Правильных ответов: " + score + " из " + quiz.length);
+        alert("Правильных ответов: " + score + " из " + quiz.length);
 }
 
 // Задание 1
- let str = 'js';
+let str = 'js';
 
- str = str.toUpperCase();
+str = str.toUpperCase();
 
- console.log(str);
+console.log(str);
 
 // Задание 2
 function filter(arr, str) {
         const lowerStr = str.toLowerCase();
-        return arr.filter(item=>item.toLowerCase().startsWith(lowerStr));
+        return arr.filter(item => item.toLowerCase().startsWith(lowerStr));
 }
 
 console.log(filter(['JavaScript', 'Java', 'Python'], 'ja'))
@@ -583,19 +583,19 @@ console.log(Math.max(52, 53, 49, 77, 21, 32));
 
 // Задание 5
 function getRandomNumber() {
-        return Math.floor(Math.random() *10) +1;
+        return Math.floor(Math.random() * 10) + 1;
 }
 console.log(getRandomNumber());
 //  Задание 6
 function getRandomNumbers(num) {
-        return Array.from({ length: Math.floor(num /2) }, () => Math.floor(Math.random() * num));
+        return Array.from({ length: Math.floor(num / 2) }, () => Math.floor(Math.random() * num));
 }
 console.log(getRandomNumbers(10));
 // Задание 7
 function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log(getRandomInt(1 ,10));
+console.log(getRandomInt(1, 10));
 // Задание 8
 console.log(new Date());
 // Задание 9
@@ -605,22 +605,133 @@ console.log(currentDate);
 
 // Задание 10
 function formatDate(date) {
-    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-    const months = [
-        "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-    ];
+        const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+        const months = [
+                "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+        ];
 
-    const year = date.getFullYear();
-    const day = date.getDate();
-    const month = date.getMonth();
-    const dayOfWeek = days[date.getDay()];
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
+        const year = date.getFullYear();
+        const day = date.getDate();
+        const month = date.getMonth();
+        const dayOfWeek = days[date.getDay()];
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
 
-    return `
+        return `
 Дата : ${day} ${months[month]} ${year} — это ${dayOfWeek}.
 Время : ${hours}:${minutes}:${seconds}`;
 }
 console.log(formatDate(new Date()));
+
+// hw-8
+function startGamestoneCutpapper() {
+        const options = ["камень", "ножницы", "бумага"];
+
+        const userChoice = prompt('Введите: "камень", "ножницы" или "бумага"');
+
+        if (!options.includes(userChoice)) {
+                alert("Некорректный ввод");
+                return;
+        }
+
+        const randomIndex = Math.floor(Math.random() * options.length);
+        const computerChoice = options[randomIndex];
+
+        let result = "";
+
+        if (userChoice === computerChoice) {
+                result = "Ничья";
+        } else if (
+                (userChoice === "камень" && computerChoice === "ножницы") ||
+                (userChoice === "ножницы" && computerChoice === "бумага") ||
+                (userChoice === "бумага" && computerChoice === "камень")
+        ) {
+                result = "Вы победили";
+        } else {
+                result = "Вы проиграли";
+        }
+
+        alert(
+                "Ваш выбор: " + userChoice + "\n" +
+                "Выбор компьютера: " + computerChoice + "\n" +
+                "Результат: " + result
+        );
+}
+// Задание 1
+
+const people = [
+        { name: 'Глеб', age: 29 },
+        { name: 'Анна', age: 17 },
+        { name: 'Олег', age: 7 },
+        { name: 'Оксана', age: 47 }
+];
+console.log(people.sort((a, b) => a.age - b.age));
+
+// Задание 2
+function isPositive(item) {
+        return item > 0;
+}
+
+function isMale(item) {
+        return item.gender === 'male';
+}
+
+function filterMale(arr, ruleFunction) {
+        const result = [];
+
+        for (let i = 0; i < arr.length; i++) {
+                if (ruleFunction(arr[i])) {
+                        result.push(arr[i]);
+                }
+        }
+
+        return result;
+}
+console.log(filterMale([3, -4, 1, 9], isPositive));
+
+const peopleNames = [
+        { name: 'Глеб', gender: 'male' },
+        { name: 'Анна', gender: 'female' },
+        { name: 'Олег', gender: 'male' },
+        { name: 'Оксана', gender: 'female' }
+];
+
+console.log(filterMale(peopleNames, isMale));
+
+// Задание 3
+let secondsPassed = 0;
+
+const intervalId = setInterval(() => {
+        secondsPassed += 3;
+        console.log(new Date());
+
+        if (secondsPassed === 30) {
+                clearInterval(intervalId);
+                console.log("30 секунд прошло");
+        }
+}, 3000);
+// Задание 4
+function delayForSecond(callback) {
+        setTimeout(callback, 1000);
+}
+delayForSecond(function () {
+        console.log('Привет, Глеб!');
+});
+
+// Задание 5
+function delayForSecond(cb) {
+        setTimeout(() => {
+                console.log('Прошла одна секунда');
+                if (cb) { cb(); }
+        }, 1000)
+}
+
+
+function sayHi(name) {
+        delayForSecond(() => sayHi('Глеб'));
+}
+console.log('Привет, ${name}!');
+
+
