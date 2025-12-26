@@ -627,38 +627,41 @@ console.log(formatDate(new Date()));
 
 // hw-8
 function startGamestoneCutpapper() {
-        const options = ["камень", "ножницы", "бумага"];
+    const options = ["камень", "ножницы", "бумага"];
 
-        const userChoice = prompt('Введите: "камень", "ножницы" или "бумага"');
+    const userChoice = prompt('Введите: "камень", "ножницы" или "бумага"')
+        ?.toLowerCase()
+        .trim();
 
-        if (!options.includes(userChoice)) {
-                alert("Некорректный ввод");
-                return;
-        }
+    if (!options.includes(userChoice)) {
+        alert("Некорректный ввод");
+        return;
+    }
 
-        const randomIndex = Math.floor(Math.random() * options.length);
-        const computerChoice = options[randomIndex];
+    const randomIndex = Math.floor(Math.random() * options.length);
+    const computerChoice = options[randomIndex];
 
-        let result = "";
+    let result = "";
 
-        if (userChoice === computerChoice) {
-                result = "Ничья";
-        } else if (
-                (userChoice === "камень" && computerChoice === "ножницы") ||
-                (userChoice === "ножницы" && computerChoice === "бумага") ||
-                (userChoice === "бумага" && computerChoice === "камень")
-        ) {
-                result = "Вы победили";
-        } else {
-                result = "Вы проиграли";
-        }
+    if (userChoice === computerChoice) {
+        result = "Ничья";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили";
+    } else {
+        result = "Вы проиграли";
+    }
 
-        alert(
-                "Ваш выбор: " + userChoice + "\n" +
-                "Выбор компьютера: " + computerChoice + "\n" +
-                "Результат: " + result
-        );
+    alert(
+        "Ваш выбор: " + userChoice + "\n" +
+        "Выбор компьютера: " + computerChoice + "\n" +
+        "Результат: " + result
+    );
 }
+
 // Задание 1
 
 const people = [
@@ -721,17 +724,21 @@ delayForSecond(function () {
 });
 
 // Задание 5
+
 function delayForSecond(cb) {
-        setTimeout(() => {
-                console.log('Прошла одна секунда');
-                if (cb) { cb(); }
-        }, 1000)
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
 }
 
 
 function sayHi(name) {
-        delayForSecond(() => sayHi('Глеб'));
+    console.log(`Привет, ${name}!`);
 }
-console.log('Привет, ${name}!');
+
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'))
+
 
 
