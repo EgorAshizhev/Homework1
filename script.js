@@ -291,23 +291,23 @@ console.log(multiplyNumbers(4, "abc"));
 console.log(multiplyNumbers("xyz", 2));
 
 //задиние 6
-function cubeNumber() {
+// function cubeNumber() {
 
-        const input = prompt("Введите число:");
+//         const input = prompt("Введите число:");
 
-        const n = Number(input);
+//         const n = Number(input);
 
-        if (Number.isNaN(n)) {
-                alert("Переданный параметр не является числом");
-        }
+//         if (Number.isNaN(n)) {
+//                 alert("Переданный параметр не является числом");
+//         }
 
-        const cube = Math.pow(n, 3);
+//         const cube = Math.pow(n, 3);
 
-        alert(`${n} в кубе равняется ${cube}`);
-        return;
-}
+//         alert(`${n} в кубе равняется ${cube}`);
+//         return;
+// }
 
-cubeNumber();
+// cubeNumber();
 // Задание 7
 const circle1 = {
         radius: 5,
