@@ -25,11 +25,11 @@
                 <img style="padding-bottom: 130px;" src="./img/littleblackstar.svg" alt="">
             </div>
             <h1 class="header__title">Добро пожаловать <br> на мой сайт мини-игр</h1>
-            <h3 class="header__title-disc">Тебе предстоит пройти несколько увлекательных игр. <br class="header__br">
+            <h2 class="header__title-disc">Тебе предстоит пройти несколько увлекательных игр. <br class="header__br">
                 Если готов, нажимай
                 <span class="header__span">«Поехали!»</span class="header__span"> и <span
                     class="header__span">приступай</span>.
-            </h3>
+            </h2>
             <a class="header__button-link" href="#games"><button class="header__button">Поехали!</button></a>
             <div class="header__rightstar">
                 <img src="./img/rightstar.svg" alt="star">
@@ -69,10 +69,10 @@
         <div class="main__rightstar">
             <img src="./img/maingreenstar.svg" alt="star">
         </div>
-        <div class="main-hs center">
+        <div class="main-hs">
             <h1 class="main__title" id="games">Об играх</h1>
-            <h3 class="main__title-disc">В моей коллекции представлено 6 игр на разные темы. <br> Игры несложные — в них
-                может поиграть каждый. <br> Все игры доступны для пользования.</h3>
+            <h2 class="main__title-disc">В моей коллекции представлено 6 игр на разные темы. <br> Игры несложные — в них
+                может поиграть каждый. <br> Все игры доступны для пользования.</h2>
             <div class="main__content">
 
                 <a href="#guessthenumber" class="main__link">
@@ -162,8 +162,8 @@
                         <img class="minigames__card-imgmob" src="./img/articlegamesmob1.svg" alt="карточка1">
                     </div>
                 </article>
-                <article class="minigames__card reverse__one" id="arifmetic">
-                    <div class="minigames__card-conteiner reverse__two">
+                <article class="minigames__card minigames__reverse-one" id="arifmetic">
+                    <div class="minigames__card-conteiner minigames__reverse-two">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Простая <br> арифметика</h2>
                             <p class="minigames__card-disc">Попробуй решить простые <br> арифметические задачи.</p>
@@ -188,8 +188,8 @@
                         <img class="minigames__card-imgmob" src="./img/articlegamesmob3.svg" alt="карточка3">
                     </div>
                 </article>
-                <article class="minigames__card reverse__one" id="stone">
-                    <div class="minigames__card-conteiner reverse__two">
+                <article class="minigames__card minigames__reverse-one" id="stone">
+                    <div class="minigames__card-conteiner minigames__reverse-two">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Камень, <br> ножницы, <br> бумага</h2>
                             <p class="minigames__card-disc">Сыграй в популярную игру <br> против компьютера.</p>
@@ -216,13 +216,13 @@
                         <img class="minigames__card-imgmob" src="./img/articlegamesmob5.svg" alt="карточка5">
                     </div>
                 </article>
-                <article class="minigames__card reverse__one" id="generated">
-                    <div class="minigames__card-conteiner reverse__two">
+                <article class="minigames__card minigames__reverse-one" id="generated">
+                    <div class="minigames__card-conteiner minigames__reverse-two">
                         <div class="minigames__card--box">
                             <h2 class="minigames__card-title">Генератор <br>случайных <br>цветов</h2>
                             <p class="minigames__card-disc">Игра, в которой при клике на кнопку <br> фон страницы
                                 меняется на случайный.</p>
-                            <button class="minigames__card-button">Играть!</button>
+                            <button id="colorGames" class="minigames__card-button">Играть!</button>
                         </div>
                     </div>
                     <div class="minigames__cardimage">
@@ -240,13 +240,37 @@
     </div>
     <footer class="footer center">
         <div class="footer__box">
-            <h2 class="footer__box-title">Все права защищены.</h1>
+            <h2 class="footer__box-title">Все права защищены.</h2>
         </div>
     </footer>
 
     <script src="./script.js">
+        function getRandomColor() {
+            const miniGames = document.querySelector('.minigames__content')
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
 
+        const button = document.getElementById('colorGames');
 
+        button.addEventListener('click', () => {
+            document.minigames__content.style.backgroundColor = getRandomColor();
+        });
+
+        // Плавный скролл
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        // _____________________________________________
     </script>
 </body>
 
