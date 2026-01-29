@@ -737,8 +737,5 @@ function sayHi(name) {
         console.log(`Привет, ${name}!`);
 }
 
-// Нужно изменить код ниже:
 delayForSecond(() => sayHi('Глеб'))
-
-
 

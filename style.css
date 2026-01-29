@@ -342,11 +342,11 @@ body {
   transform: scale(1.1);
 }
 
-.reverse__one {
+.minigames__reverse-one {
   display: flex;
   flex-direction: row-reverse;
 }
-.reverse__one__two {
+.minigames__reverse-one-two {
   display: flex;
   justify-content: flex-start;
 }

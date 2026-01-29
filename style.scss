@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "Montserrat", "arial";
     font-size: 16px;
@@ -195,12 +194,6 @@ body {
         row-gap: 0px;
     }
 
-    // &__product {
-    //     height: 23vh;
-    // }
-
-
-
     &__link {
         text-decoration: none;
         width: 378px;
@@ -291,7 +284,9 @@ body {
     background-color: $color-grey;
 
     &__content {
+        background-color: getRandomColor();
         padding-bottom: 144px;
+
     }
 
     &__upstars {
@@ -400,11 +395,11 @@ body {
 
 }
 
-.reverse__one {
+.minigames__reverse-one {
     display: flex;
     flex-direction: row-reverse;
 
-    &__two {
+    &-two {
         display: flex;
         justify-content: flex-start;
     }
