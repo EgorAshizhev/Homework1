@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -63,6 +67,7 @@ body {
   display: flex;
   align-items: center;
   overflow-x: hidden;
+  white-space: nowrap;
 }
 .animated__strip-text {
   height: 36px;
@@ -71,6 +76,7 @@ body {
   flex-direction: row;
   gap: 51px;
   text-wrap-mode: nowrap;
+  animation: moveLeft 21s linear infinite;
 }
 .animated-centertext {
   font-weight: 700;
@@ -132,7 +138,7 @@ body {
 
 .main {
   position: relative;
-  background-color: rgb(32, 32, 39);
+  background: none;
   padding-top: 94px;
   z-index: 5;
   display: grid;
@@ -245,7 +251,7 @@ body {
 
 .minigames {
   position: relative;
-  background-color: rgb(32, 32, 39);
+  background: none;
 }
 .minigames__content {
   padding-bottom: 144px;
@@ -342,6 +348,17 @@ body {
   transform: scale(1.1);
 }
 
+.forgame__color {
+  --bg-color: transparent;
+  background-color: var(--bg-color);
+  transition: background-color 0.4s ease;
+}
+
+.forgame__color {
+  background-color: var(--bg-color);
+  background-color: rgb(32, 32, 39);
+}
+
 .minigames__reverse-one {
   display: flex;
   flex-direction: row-reverse;
@@ -388,6 +405,14 @@ body {
   display: none;
 }
 
+@keyframes moveLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 @media (max-width: 767px) {
   .center {
     padding-left: calc(50% - 172px);
@@ -421,11 +446,15 @@ body {
   .animated {
     display: flex;
     height: 52px;
+    overflow-x: hidden;
+    white-space: nowrap;
   }
   .animated__strip-text {
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-wrap-mode: nowrap;
+    animation: moveLeft 21s linear infinite;
   }
   .animated__strip-text .animated__strip-centertext {
     display: flex;
@@ -491,6 +520,8 @@ body {
     padding-bottom: 10px;
   }
   .minigames__content-title {
+    padding-bottom: 48px;
+    padding-top: 48px;
     font-size: 40px;
   }
   .minigames__card-title {
@@ -547,6 +578,14 @@ body {
   }
   .minigames__downstars {
     display: none;
+  }
+}
+@keyframes moveLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 @media (min-width: 836px) and (max-width: 1210px) {
