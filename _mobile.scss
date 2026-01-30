@@ -39,12 +39,16 @@
     .animated {
         display: flex;
         height: 52px;
+        overflow-x: hidden;
+        white-space: nowrap;
     }
 
     .animated__strip-text {
         display: flex;
         flex-direction: row;
         align-items: center;
+        text-wrap-mode: nowrap;
+        animation: moveLeft 21s linear infinite;
 
         .animated__strip-centertext {
             display: flex;
@@ -127,6 +131,8 @@
     }
 
     .minigames__content-title {
+        padding-bottom: 48px;
+        padding-top: 48px;
         font-size: 40px;
     }
 
@@ -200,4 +206,15 @@
     }
 
 }
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 @import 'tablet';

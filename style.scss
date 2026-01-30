@@ -1,12 +1,14 @@
 @import 'vars';
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: "Montserrat", "arial";
@@ -71,6 +73,7 @@ body {
     display: flex;
     align-items: center;
     overflow-x: hidden;
+    white-space: nowrap;
 
     &__strip-text {
         height: 36px;
@@ -79,6 +82,7 @@ body {
         flex-direction: row;
         gap: 51px;
         text-wrap-mode: nowrap;
+        animation: moveLeft 21s linear infinite;
     }
 
     &-centertext {
@@ -147,7 +151,7 @@ body {
 
 .main {
     position: relative;
-    background-color: $color-grey;
+    background: none;
     padding-top: 94px;
     z-index: 5;
     display: grid;
@@ -194,12 +198,6 @@ body {
         padding-top: 72px;
         row-gap: 0px;
     }
-
-    // &__product {
-    //     height: 23vh;
-    // }
-
-
 
     &__link {
         text-decoration: none;
@@ -288,10 +286,11 @@ body {
 
 .minigames {
     position: relative;
-    background-color: $color-grey;
+    background: none;
 
     &__content {
         padding-bottom: 144px;
+
     }
 
     &__upstars {
@@ -400,15 +399,29 @@ body {
 
 }
 
-.reverse__one {
+.forgame__color {
+    --bg-color: transparent;
+    background-color: var(--bg-color);
+    transition: background-color 0.4s ease;
+}
+
+.forgame__color {
+    background-color: var(--bg-color);
+    background-color: rgba(32, 32, 39, 1);
+}
+
+
+.minigames__reverse-one {
     display: flex;
     flex-direction: row-reverse;
 
-    &__two {
+    &-two {
         display: flex;
         justify-content: flex-start;
     }
+
 }
+
 
 // ФУТЕР
 .footer {
@@ -450,6 +463,16 @@ body {
 
 .minigames__card-imgmob {
     display: none;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 @import 'mobile';
